@@ -1,0 +1,17 @@
+#lang racket
+(define low 1)
+(define high 1000)
+
+(define (middle)
+  (quotient (+ low high) 2))
+
+(define (guess)
+  (middle))
+
+(define (higher)
+  (set! low (middle))
+  (guess))
+
+(define (lower)
+  (set! high (middle))
+  (guess))
